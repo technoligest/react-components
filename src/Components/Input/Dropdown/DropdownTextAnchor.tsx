@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import * as React from 'react';
-import { Icon } from 'src/Components/Icon';
-import { onEnterPress } from 'src/utils/utils';
+import { Icon } from '../../../Components/Icon';
+import { onEnterPress } from '../../../utils/utils';
 
 export type DropdownTextAnchorStyle = 'normal' | 'compact';
 

@@ -2,9 +2,9 @@ import { ModifierPhases } from '@popperjs/core';
 import * as React from 'react';
 
 import { Modifier, usePopper } from 'react-popper';
-import { DropdownAnchor } from 'src/Components/Input/Dropdown/DropdownAnchor';
-import { DropdownItem } from 'src/Components/Input/Dropdown/DropdownItem';
-import { DropdownListContainer } from 'src/Components/Input/Dropdown/DropdownListContainer';
+import { DropdownAnchor } from '../../../Components/Input/Dropdown/DropdownAnchor';
+import { DropdownItem } from '../../../Components/Input/Dropdown/DropdownItem';
+import { DropdownListContainer } from '../../../Components/Input/Dropdown/DropdownListContainer';
 import { TextInput } from '../TextInput';
 import { IDropdownAnchorProps } from './DropdownAnchor';
 import { IDropdownItemProps } from './DropdownItem';

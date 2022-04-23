@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { displayPhoneNumber, displayPrice, noop } from 'src/utils/utils';
-import { isNever } from 'src/utils/utils';
-import { Icon } from 'src/Components/Icon';
-import { TextInputInternal } from 'src/Components/Input/TextInputInternal';
+import { displayPhoneNumber, displayPrice, noop } from '../../utils/utils';
+import { isNever } from '../../utils/utils';
+import { Icon } from '../../Components/Icon';
+import { TextInputInternal } from '../../Components/Input/TextInputInternal';
 
 interface IBaseInputProps<T> {
   disabled?: boolean;

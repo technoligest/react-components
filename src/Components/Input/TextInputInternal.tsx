@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import * as React from 'react';
-import { Icon } from 'src/Components/Icon';
+import { Icon } from '../../Components/Icon';
 import uuid from 'uuid';
 
 export interface ITextInputInternalprops {

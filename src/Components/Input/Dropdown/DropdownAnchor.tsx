@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Button, IButtonProps } from 'src/Components/Button';
+import { Button, IButtonProps } from '../../../Components/Button';
 import {
   DropdownTextAnchor,
   DropdownTextAnchorStyle,
-} from 'src/Components/Input/Dropdown/DropdownTextAnchor';
+} from '../../../Components/Input/Dropdown/DropdownTextAnchor';
 
 interface IDropdownButtonAnchorProps extends IDropdownAnchorBaseProps {
   type: 'button';
