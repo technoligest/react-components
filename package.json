@@ -1,6 +1,6 @@
 {
   "name": "startup-react-components",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Simple to use React components for the hustlers to get their startup off the ground quickly.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -34,7 +34,6 @@
     "awesome-phonenumber": "^2.72.0",
     "classnames": "^2.3.1",
     "luxon": "^2.3.2",
-    "react-datepicker": "^4.7.0",
     "react-icons": "^4.3.1",
     "react-popper": "^2.2.5",
     "uuid": "^8.3.2"
