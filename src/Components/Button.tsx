@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import { Icon, TIconName } from 'src/Components/Icon';
+import { Icon, TIconName } from './Icon';
 
 export enum ButtonType {
   Primary = 'Primary',
@@ -89,9 +89,7 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
       >
         <Icon name={props.icon} size={25} />
         {props.text && (
-          <div className={'ml-3'}>
-            {props.text && <div>{props.text}</div>}
-          </div>
+          <div className={'ml-3'}>{props.text && <div>{props.text}</div>}</div>
         )}
       </button>
     );
