@@ -1,43 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "lib/esm",
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom", "esnext"],
-    "typeRoots": ["./src/@types", "./node_modules/@types"],
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "importHelpers": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "noEmit": true,
-    "incremental": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "lib/esm"
   },
   "compileOnSave": true,
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts",
-    "src/config",
-    "src/**/*.example.ts"
-  ],
-  "include": ["next-env.d.ts", "decs.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": ["node_modules", "lib"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
