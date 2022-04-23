@@ -5,7 +5,6 @@
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom", "esnext"],
-    "types": ["node", "reflect-metadata"],
     "typeRoots": ["./src/@types", "./node_modules/@types"],
     "sourceMap": true,
     "allowJs": true,
