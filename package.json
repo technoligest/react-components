@@ -1,0 +1,33 @@
+{
+  "name": "react-components",
+  "version": "1.0.0",
+  "description": "Shared components for quickly building React apps.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technoligest/react-components.git"
+  },
+  "author": "technoligest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/technoligest/react-components/issues"
+  },
+  "homepage": "https://github.com/technoligest/react-components#readme",
+  "devDependencies": {
+    "@types/react": "^18.0.6",
+    "@types/react-dom": "^18.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "react-icons": "^4.3.1"
+  }
+}
