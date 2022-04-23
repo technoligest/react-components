@@ -1,6 +1,6 @@
 {
   "name": "startup-react-components",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Simple to use React components for the hustlers to get their startup off the ground quickly.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -25,10 +25,12 @@
   "devDependencies": {
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "tslib": "^2.4.0",
     "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "dependencies": {
     "awesome-phonenumber": "^2.72.0",
