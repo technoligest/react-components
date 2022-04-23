@@ -1,7 +1,7 @@
 {
-  "name": "react-components",
+  "name": "startup-react-components",
   "version": "1.0.0",
-  "description": "Shared components for quickly building React apps.",
+  "description": "Simple to use React components for the hustlers to get their startup off the ground quickly.",
   "main": "src/index.ts",
   "scripts": {
     "build": "yarn build:esm && yarn build:cjs",
