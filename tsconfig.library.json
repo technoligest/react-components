@@ -5,7 +5,7 @@
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom", "esnext"],
-    "jsx": "preserve",
+    "jsx": "react",
     "moduleResolution": "node",
     "sourceMap": true,
     "declaration": true,
@@ -17,7 +17,7 @@
     "incremental": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "noEmit": true,
+    "noEmit": false,
     "esModuleInterop": true
   },
   "compileOnSave": true,

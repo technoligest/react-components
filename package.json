@@ -1,14 +1,14 @@
 {
   "name": "startup-react-components",
-  "version": "1.0.236",
+  "version": "1.0.237",
   "description": "Simple to use React components for the hustlers to get their startup off the ground quickly.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "scripts": {
     "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "build:esm": "tsc --project tsconfig.library.json",
+    "build:cjs": "tsc --project tsconfig.library.json --module commonjs --outDir lib/cjs",
     "prepublishOnly": "yarn build",
     "publish-npm": "npm publish --access public",
     "dev": "next dev"
