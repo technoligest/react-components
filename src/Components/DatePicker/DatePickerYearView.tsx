@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 import * as React from 'react';
-import { range } from 'src/utils/utils';
+import { range } from '../../utils/utils';
 import { DatePickerItemsGrid } from './DatePickerItemsGrid';
 import { TDatePickerView } from './DatePickerTypes';
 
@@ -11,7 +11,9 @@ export interface IDatePickerYearViewProps {
   setViewType: (newType: TDatePickerView) => void;
 }
 
-export const DatePickerYearView: React.FunctionComponent<IDatePickerYearViewProps> = props => {
+export const DatePickerYearView: React.FunctionComponent<
+  IDatePickerYearViewProps
+> = props => {
   return (
     <DatePickerItemsGrid
       items={getYearsArray(props.currentMonth, props.yearOffset).map(year => ({
