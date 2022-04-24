@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ButtonsShowcase } from './ButtonsShowcase';
 import { DatepickerShowcase } from './DatepickerShowcase';
+import { ModalShowcase } from './showcaseSections/ModalShowcase';
 
 export const Showcase: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ export const Showcase: React.FC = () => {
         <div className='font-bold text-xl'>Showcase</div>
         <ButtonsShowcase />
         <DatepickerShowcase />
+        <ModalShowcase />
       </div>
     </div>
   );

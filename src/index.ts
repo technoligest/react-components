@@ -8,3 +8,5 @@ export { Dropdown } from './Components/Input/Dropdown/Dropdown';
 export { DatePicker } from './Components/DatePicker/DatePicker';
 import { IDatePickerProps as DP } from './Components/DatePicker/DatePicker';
 export type IDatePickerProps = DP;
+
+export { Modal } from './Components/Modal';

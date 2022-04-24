@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { DatePicker } from 'src/Components/DatePicker/DatePicker';
+import { DatePicker } from '../src/Components/DatePicker/DatePicker';
 import { ShowcaseHeader } from './ShowcaseHeader';
 import { DateTime } from 'luxon';
 

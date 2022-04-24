@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, ButtonType } from 'src/Components/Button';
+import { Button, ButtonType } from '../src/Components/Button';
 import { ShowcaseHeader } from './ShowcaseHeader';
 
 export const ButtonsShowcase: React.FC = () => {
