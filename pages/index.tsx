@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { GetStaticProps, NextPage } from 'next';
-import { Showcase } from '../src/Showcase/Showcase';
+import { Showcase } from '../showcase/Showcase';
 
 const Home = () => {
   return <Showcase />;

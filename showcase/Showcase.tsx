@@ -1,9 +1,6 @@
 import * as React from 'react';
-import { Button, ButtonType } from 'src/Components/Button';
-import { DatePicker } from 'src/Components/DatePicker/DatePicker';
 import { ButtonsShowcase } from './ButtonsShowcase';
 import { DatepickerShowcase } from './DatepickerShowcase';
-import { ShowcaseHeader } from './ShowcaseHeader';
 
 export const Showcase: React.FC = () => {
   return (

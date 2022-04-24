@@ -1,9 +1,4 @@
-export {
-  Button,
-  ButtonType,
-  ButtonIcon,
-  IButtonProps,
-} from './Components/Button';
+export { Button, ButtonType, ButtonIcon } from './Components/Button';
 export { TextInput } from './Components/Input/TextInput';
 export { FileInput } from './Components/Input/FileInput';
 import { IDropdownProps as IDropdownPropsInternal } from './Components/Input/Dropdown/Dropdown';

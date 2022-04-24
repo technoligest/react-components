@@ -1,5 +1,9 @@
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './showcase/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     fontFamily: {
       sans: ['Ubuntu'],
