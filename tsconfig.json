@@ -4,7 +4,11 @@
     "outDir": "lib/esm",
     "module": "esnext",
     "target": "es5",
-    "lib": ["es6", "dom", "esnext"],
+    "lib": [
+      "es6",
+      "dom",
+      "esnext"
+    ],
     "jsx": "preserve",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -21,6 +25,12 @@
     "esModuleInterop": true
   },
   "compileOnSave": true,
-  "exclude": ["node_modules", "lib"],
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
 }
