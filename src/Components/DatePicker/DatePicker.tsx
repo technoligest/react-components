@@ -18,7 +18,7 @@ export const DatePicker: React.FC<IDatePickerProps> = props => {
       isVisible={isVisible}
       setIsVisible={setIsVisible}
     >
-      <DatePickerInternal {...props} />
+      <DatePickerInternal {...props} isVisible={isVisible} />
     </Poppable>
   );
 };

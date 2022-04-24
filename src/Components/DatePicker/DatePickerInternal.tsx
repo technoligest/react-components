@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import { DateTime } from 'luxon';
 import * as React from 'react';
 import { DatePickerDayView } from './DatePickerDayView';
@@ -10,6 +11,7 @@ import { DatePickerYearView } from './DatePickerYearView';
 export interface IDatePickerInternalProps {
   selectedDate: DateTime | undefined;
   setSelectedDate: (newDate: DateTime | undefined) => void;
+  isVisible: boolean;
 }
 
 export const DatePickerInternal: React.FunctionComponent<
@@ -22,7 +24,11 @@ export const DatePickerInternal: React.FunctionComponent<
   const [yearOffset, setYearOffset] = React.useState(0);
 
   return (
-    <div className='w-[400px]'>
+    <div
+      className={classnames('w-[400px] shadow-base border-1 bg-white', {
+        ['hidden']: !props.isVisible,
+      })}
+    >
       <DatePickerHeader
         currentMonth={currentMonth}
         setCurrentMonth={setCurrentMonth}
