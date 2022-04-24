@@ -22,10 +22,7 @@ export interface IDropdownProps {
 export const Dropdown: React.FunctionComponent<IDropdownProps> = props => {
   const [searchString, setSearchString] = React.useState('');
   const [isVisible, setIsVisible] = React.useState(false);
-  const anchorReference = React.useRef(null);
-  const popperRef = React.useRef(null);
 
-  useCloseOnClickOutside(popperRef, anchorReference, setIsVisible);
   const firstItemRef: React.LegacyRef<HTMLDivElement> | undefined =
     React.useRef(null);
   const dropdownItems = props.items
@@ -49,7 +46,11 @@ export const Dropdown: React.FunctionComponent<IDropdownProps> = props => {
       );
     });
   return (
-    <Poppable anchor={props.anchor}>
+    <Poppable
+      anchor={props.anchor}
+      isVisible={isVisible}
+      setIsVisible={setIsVisible}
+    >
       <DropdownListContainer isVisible={isVisible}>
         {props.searchable && (
           <TextInput
@@ -75,70 +76,3 @@ export const Dropdown: React.FunctionComponent<IDropdownProps> = props => {
     </Poppable>
   );
 };
-
-function usePopperInternal(
-  referenceRef: React.MutableRefObject<null>,
-  popperRef: React.MutableRefObject<null>
-) {
-  const modifiers: ReadonlyArray<Modifier<any>> = React.useMemo(
-    () => [
-      {
-        name: 'sameWidth' as any,
-        enabled: true,
-        fn: ({ state }) => {
-          state.styles.popper.minWidth = `${state.rects.reference.width}px`;
-        },
-        effect({ state }) {
-          state.elements.popper.style.minWidth = `${
-            (state.elements.reference as any).offsetWidth
-          }px`;
-        },
-        phase: 'beforeWrite' as ModifierPhases,
-        requires: ['computeStyles'],
-      },
-    ],
-    [popperRef.current]
-  );
-  return usePopper(referenceRef.current, popperRef.current, {
-    placement: 'bottom-start',
-    strategy: 'fixed',
-    modifiers,
-  });
-}
-
-function useCloseOnClickOutside(
-  popperRef: React.MutableRefObject<any>,
-  anchorReference: React.MutableRefObject<any>,
-  setVisibility: (isVisible: boolean) => void
-) {
-  React.useEffect(() => {
-    // listen for clicks and close dropdown on body
-    document.addEventListener(
-      'mousedown',
-      handleDocumentClick(popperRef, anchorReference, setVisibility)
-    );
-    return () => {
-      document.removeEventListener(
-        'mousedown',
-        handleDocumentClick(popperRef, anchorReference, setVisibility)
-      );
-    };
-  }, []);
-}
-
-function handleDocumentClick(
-  popperRef: React.MutableRefObject<any>,
-  anchorReference: React.MutableRefObject<any>,
-  setVisibility: (isVisible: boolean) => void
-): (event: MouseEvent) => void {
-  return (event: MouseEvent) => {
-    if (
-      anchorReference?.current?.contains(event.target) ||
-      popperRef?.current?.contains(event.target)
-    ) {
-      return;
-    }
-    setVisibility(false);
-    return event;
-  };
-}

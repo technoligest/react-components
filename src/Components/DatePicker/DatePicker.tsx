@@ -11,8 +11,13 @@ export interface IDatePickerProps {
 }
 
 export const DatePicker: React.FC<IDatePickerProps> = props => {
+  const [isVisible, setIsVisible] = React.useState(false);
   return (
-    <Poppable anchor={props.anchor}>
+    <Poppable
+      anchor={props.anchor}
+      isVisible={isVisible}
+      setIsVisible={setIsVisible}
+    >
       <DatePickerInternal {...props} />
     </Poppable>
   );

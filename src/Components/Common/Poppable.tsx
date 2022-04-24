@@ -7,18 +7,18 @@ import { IDropdownAnchorProps } from '../Input/Dropdown/DropdownAnchor';
 
 export interface IDropdownProps {
   anchor: IDropdownAnchorProps;
+  isVisible: boolean;
+  setIsVisible: (isVisible: boolean) => void;
 }
 
 export const Poppable: React.FunctionComponent<
   React.PropsWithChildren<IDropdownProps>
 > = props => {
-  const [searchString, setSearchString] = React.useState('');
-  const [isVisible, setIsVisible] = React.useState(false);
   const anchorReference = React.useRef(null);
   const popperRef = React.useRef(null);
   const { styles, attributes } = usePopperInternal(anchorReference, popperRef);
 
-  useCloseOnClickOutside(popperRef, anchorReference, setIsVisible);
+  useCloseOnClickOutside(popperRef, anchorReference, props.setIsVisible);
   const firstItemRef: React.LegacyRef<HTMLDivElement> | undefined =
     React.useRef(null);
   return (
@@ -27,14 +27,14 @@ export const Poppable: React.FunctionComponent<
         outerProps={props.anchor}
         innerProps={{
           setIsVisible: newIsVisible => {
-            setIsVisible(newIsVisible);
+            props.setIsVisible(newIsVisible);
             if (newIsVisible) {
               if (firstItemRef.current) {
                 (firstItemRef.current as any).focus();
               }
             }
           },
-          isVisible,
+          isVisible: props.isVisible,
           anchorReference,
         }}
       />
