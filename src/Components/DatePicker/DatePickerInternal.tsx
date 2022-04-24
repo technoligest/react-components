@@ -12,6 +12,7 @@ export interface IDatePickerInternalProps {
   selectedDate: DateTime | undefined;
   setSelectedDate: (newDate: DateTime | undefined) => void;
   isVisible: boolean;
+  setIsVisible: (isVisible: boolean) => void;
 }
 
 export const DatePickerInternal: React.FunctionComponent<
@@ -25,9 +26,12 @@ export const DatePickerInternal: React.FunctionComponent<
 
   return (
     <div
-      className={classnames('w-[400px] shadow-base border-1 bg-white', {
-        ['hidden']: !props.isVisible,
-      })}
+      className={classnames(
+        'w-[400px] shadow-base border-1 bg-white rounded-xl p-5',
+        {
+          ['hidden']: !props.isVisible,
+        }
+      )}
     >
       <DatePickerHeader
         currentMonth={currentMonth}
@@ -41,7 +45,10 @@ export const DatePickerInternal: React.FunctionComponent<
         <DatePickerDayView
           currentMonth={currentMonth}
           selectedDate={props.selectedDate}
-          setSelectedDate={props.setSelectedDate}
+          setSelectedDate={d => {
+            props.setSelectedDate(d);
+            props.setIsVisible(false);
+          }}
         />
       )}
       {viewType === 'month' && (

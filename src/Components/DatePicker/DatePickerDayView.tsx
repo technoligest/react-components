@@ -8,23 +8,28 @@ export interface IDatePickerDayViewProps {
   setSelectedDate: (newDate: DateTime) => void;
 }
 
-export const DatePickerDayView: React.FunctionComponent<IDatePickerDayViewProps> = props => {
+export const DatePickerDayView: React.FunctionComponent<
+  IDatePickerDayViewProps
+> = props => {
   return (
-    <div className='space-y-5'>
+    <div className=''>
       {getRows(props.currentMonth).map(row => (
         <div className='flex flex-row justify-between'>
           {row.map(s => (
             <span
-              className={classNames('w-8 flex justify-center p-3', {
-                ['cursor-pointer hover:bg-blue-500 hover:text-white rounded-lg']:
-                  s?.clickable,
-                ['cursor-default']: !s?.clickable,
-                ['bg-blue-600 text-white ']:
-                  props.selectedDate &&
-                  s?.date
-                    ?.startOf('day')
-                    .equals(props.selectedDate.startOf('day')),
-              })}
+              className={classNames(
+                'w-10 h-10 flex justify-center items-center m-1',
+                {
+                  ['cursor-pointer hover:bg-blue-500 hover:text-white rounded-lg']:
+                    s?.clickable,
+                  ['cursor-default']: !s?.clickable,
+                  ['bg-blue-600 text-white ']:
+                    props.selectedDate &&
+                    s?.date
+                      ?.startOf('day')
+                      .equals(props.selectedDate?.startOf('day')),
+                }
+              )}
               onClick={
                 s?.date
                   ? () => {
