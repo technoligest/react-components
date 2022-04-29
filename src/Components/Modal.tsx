@@ -56,6 +56,7 @@ export const Modal: React.FunctionComponent<
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             maxHeight: 'calc(100vh - 50px)',
+            maxWidth: '100vw',
             padding: '0px',
             border: 'none',
             borderRadius: '.75rem',

@@ -1,6 +1,6 @@
 {
   "name": "startup-react-components",
-  "version": "1.0.237",
+  "version": "1.0.238",
   "description": "Simple to use React components for the hustlers to get their startup off the ground quickly.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
