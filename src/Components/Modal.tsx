@@ -68,7 +68,7 @@ export const Modal: React.FunctionComponent<
           className={classnames(
             props.className,
             'backdrop-blur-3xl bg-white/60 dark:bg-slate-900/50',
-            'shadow-xl rounded-xl mh-full p-10 w-[500px] overflow-y-auto',
+            'shadow-xl rounded-xl mh-full p-10 w-[500px] max-w-[100vw] overflow-y-auto',
             'dark:text-white'
           )}
         >
