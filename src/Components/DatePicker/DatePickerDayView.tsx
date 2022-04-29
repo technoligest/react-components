@@ -60,7 +60,7 @@ function getRows(
     })),
   ];
   for (let i = 1; i <= monthStart.daysInMonth; ++i) {
-    const newDay = monthStart.plus({ day: i });
+    const newDay = monthStart.plus({ day: i - 1 });
     if (newDay.weekday === 1) {
       week = new Array(7).fill(undefined);
     }
